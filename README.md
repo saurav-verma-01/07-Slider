@@ -4,6 +4,44 @@
 
 ## Steps
 
+## Important
+
+- To place all slide at there apropriate positions based on their individual index and current showItem =>
+  on slide div
+
+```
+style ={{transform:`translateX(${100 * (personIndex - showItem)})` }}
+
+```
+
+- To make sure you always remain within the list boundaries when clicking next and previous buttons
+
+```
+const nextSlide = () => {
+  setShowIndex(old => (old + 1) % people.length)
+}
+
+const prevSlide = () => {
+  setShowSlide(old => (old - 1 + people.length) % people.length)
+}
+
+```
+
+- to cleanup set Timeout for autoplay
+
+```
+useEffect(()=>{
+  const interval = setInterval(()=>{
+    nextSlide();
+  },2000)
+
+  return () => {
+    clearInterval(interval)
+  }
+},[showItem])
+
+```
+
 #### Explore Data
 
 Explore arrays in data.js
