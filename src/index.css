@@ -21,9 +21,9 @@ main {
   height: 400px;
   overflow: hidden;
 }
-.slide {
+/* .slide {
   position: absolute;
-}
+} */
 
 .slider-img-container {
   width: 9.375rem;
@@ -106,4 +106,12 @@ button {
 }
 .next {
   right: 1rem;
+}
+
+/* Slick */
+
+.slick-container {
+  margin: 10rem auto;
+  width: 80vw;
+  max-width: 800px;
 }
