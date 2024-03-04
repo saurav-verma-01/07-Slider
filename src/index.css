@@ -18,6 +18,11 @@ main {
   width: 100%;
   max-width: 50rem;
   position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
 }
 
 .slider-img-container {
